@@ -1,0 +1,1113 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+  scrollbar-color: #f2c344 #ececec;
+  scrollbar-width: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ececec;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f2c344;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d8ab2f;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: white;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -5em;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+h2,
+h3,
+h4 {
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.hidden-visually {
+  border: 0;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.parallax {
+  background-position: center !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.btn {
+  background: #d20040;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.btn a {
+  color: white;
+}
+
+header {
+  background: #d20040;
+  height: 5em;
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+
+header #logo {
+  display: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 20px;
+  color: white;
+  margin: 2em auto 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+header #logo::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -0.5em;
+  left: 1em;
+  width: 100%;
+  height: 2px;
+  background: #9d0030;
+}
+
+header #main-nav {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header #main-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header #main-nav ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header #main-nav ul li a {
+  color: white;
+}
+
+header #main-nav ul li a i {
+  font-size: 28px;
+}
+
+main {
+  margin-top: 5em;
+  width: 100%;
+}
+
+main #hero {
+  background: #9d0030;
+  height: 75vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+main #hero::after {
+  content: '';
+  border-color: transparent transparent #ffffff transparent;
+  border-style: solid;
+  border-width: 0 0 10vw 100vw;
+  height: 0;
+  width: 0;
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  background: #9d0030;
+}
+
+main #hero #hero-text {
+  margin: 0 auto;
+  width: 90%;
+  height: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #hero #hero-text h1 {
+  color: white;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+main #hero #hero-text p {
+  display: block;
+  width: 90%;
+  margin: 1em auto 0 auto;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+}
+
+main #hero #goto-projects {
+  color: white;
+  -webkit-text-stroke: 0.4px #d20040;
+  position: absolute;
+  bottom: 0.3em;
+  left: 0.2em;
+  z-index: 2;
+  -webkit-transform: rotate(-6deg);
+          transform: rotate(-6deg);
+  font-family: 'Tangerine', cursive;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+main #hero #cubes {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  gap: 8px;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  bottom: 15vw;
+  right: 1.5em;
+  z-index: 2;
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+}
+
+main #hero #cubes .cube {
+  background: white;
+  border-radius: 7px;
+  position: relative;
+}
+
+main #hero #cubes .cube:last-child {
+  background: #d20040;
+  left: 2.5em;
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+}
+
+main #hero #cubes .cube:nth-child(3) {
+  left: 2.5em;
+}
+
+main #skills {
+  position: relative;
+  padding-bottom: 10.25em;
+  overflow: hidden;
+}
+
+main #skills::after {
+  content: '';
+  border-color: transparent transparent #ffffff transparent;
+  border-style: solid;
+  border-width: 0 0 10vw 100vw;
+  height: 0;
+  width: 0;
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  background: #9d0030;
+  background: #ffffff;
+  border-color: transparent transparent #9d0030 transparent;
+}
+
+main #skills h2 {
+  margin-top: 2em;
+  margin-right: 1em;
+  text-align: end;
+}
+
+main #skills h3 {
+  font-weight: bold;
+  margin-top: 4em;
+}
+
+main #skills #frontend {
+  margin-left: 20%;
+}
+
+main #skills #frontend::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: #d20040;
+  margin-left: 1em;
+}
+
+main #skills #backend {
+  text-align: center;
+}
+
+main #skills #backend::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: #d20040;
+  width: 45%;
+  margin: 0 auto;
+}
+
+main #skills #other {
+  text-align: end;
+  margin-right: 20%;
+}
+
+main #skills #other::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: #d20040;
+  margin-right: 1em;
+}
+
+main #skills .logos {
+  margin: 1.5em auto 0 auto;
+  width: 80%;
+  min-height: 5em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(100px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  -ms-grid-rows: (minmax(100px, 1fr))[auto-fit];
+      grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 25px;
+  row-gap: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+main #skills .logos img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+main #projects {
+  background: #9d0030;
+  padding-top: 1em;
+  overflow: hidden;
+}
+
+main #projects #projects-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 1650px;
+  margin: 0 auto;
+  position: relative;
+  bottom: 3.5em;
+  padding-top: 2em;
+}
+
+main #projects #projects-head h2 {
+  color: white;
+  font-size: 2rem;
+  margin-left: 1em;
+  margin-top: 2em;
+}
+
+main #projects #projects-head img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  margin: 0 auto;
+}
+
+main #projects #projects-head a {
+  color: white;
+  position: absolute;
+  font-size: 0.5rem;
+  bottom: 12.5em;
+  margin: 0 auto;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+main #projects .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 25px;
+  max-width: 1400px;
+  -webkit-box-shadow: 3px 6px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 6px 4px rgba(0, 0, 0, 0.3);
+  margin-top: 2em;
+  margin-bottom: 5em;
+}
+
+main #projects .project:last-child {
+  margin-bottom: 3.5em;
+}
+
+main #projects .project .project-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #projects .project .project-info h3 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 0.5em;
+  margin: 0 0 1.25em 0.5em;
+}
+
+main #projects .project .project-info h3::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: #d20040;
+  width: 30%;
+  margin-left: 8%;
+}
+
+main #projects .project .project-info p {
+  color: white;
+  width: 85%;
+  margin: 0 auto;
+  display: block;
+}
+
+main #projects .project .project-info .project-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 2.5em auto 0 auto;
+  width: 70%;
+}
+
+main #projects .project .project-info .project-links .github-container {
+  width: 20%;
+  max-width: 58px;
+  height: auto;
+  position: relative;
+}
+
+main #projects .project .project-info .project-links .github-container .tooltip {
+  display: block;
+  position: absolute;
+  top: -0.4em;
+  right: -0.5em;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.281);
+  padding-left: 0.52em;
+  z-index: 998;
+  font-weight: bold;
+  font-size: 16px;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+main #projects .project .project-info .project-links .github-container .tooltip:hover {
+  background: #181818;
+}
+
+main #projects .project .project-info .project-links .github-container .tooltip:hover:before, main #projects .project .project-info .project-links .github-container .tooltip:hover:after {
+  opacity: 1;
+}
+
+main #projects .project .project-info .project-links .github-container .tooltip::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 100%;
+  margin-left: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  color: black;
+  text-align: center;
+  background: #f2c344;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: 0.3s opacity;
+  transition: 0.3s opacity;
+  font-weight: 300;
+}
+
+@media only screen and (min-width: 280px) {
+  main #projects .project .project-info .project-links .github-container .tooltip::before {
+    width: 125px !important;
+  }
+}
+
+@media only screen and (min-width: 320px) {
+  main #projects .project .project-info .project-links .github-container .tooltip::before {
+    width: 150px !important;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  main #projects .project .project-info .project-links .github-container .tooltip::before {
+    width: 200px !important;
+  }
+}
+
+main #projects .project .project-info .project-links .github-container .tooltip::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  margin-left: -5px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border: 10px solid #f2c344;
+  border-color: transparent #f2c344 transparent transparent;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+main #projects .project .project-info .project-links .github-container img {
+  width: 100%;
+  height: 100%;
+  -webkit-filter: invert(100%) sepia(1%) saturate(1846%) hue-rotate(207deg) brightness(115%) contrast(101%);
+          filter: invert(100%) sepia(1%) saturate(1846%) hue-rotate(207deg) brightness(115%) contrast(101%);
+  cursor: pointer;
+}
+
+main #projects .project .project-info .project-links .github-container img[data-transparent] {
+  opacity: 0.3;
+  -webkit-filter: unset;
+          filter: unset;
+  cursor: unset;
+}
+
+main #projects .project .project-image {
+  width: 90%;
+  max-width: 580px;
+  margin: 1.5em auto 2.5em auto;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main #contact #contact-left {
+  display: none;
+  background: url(../images/projects-bg.jpg);
+}
+
+main #contact #contact-right {
+  width: 100%;
+  background: white;
+}
+
+main #contact #contact-right h2 {
+  text-align: end;
+  margin-top: 2.5em;
+  margin-right: 1em;
+}
+
+main #contact #contact-right #contact-form {
+  width: 90%;
+  max-width: 600px;
+  margin: 6em auto 6em auto;
+}
+
+main #contact #contact-right #contact-form .floating {
+  margin-bottom: 2rem;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+main #contact #contact-right #contact-form .floating:hover, main #contact #contact-right #contact-form .floating:focus-within {
+  background: #f1f1f1;
+}
+
+main #contact #contact-right #contact-form .floating input,
+main #contact #contact-right #contact-form .floating textarea {
+  resize: none;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  border: none;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  background: transparent;
+  width: 100%;
+  outline: none;
+  display: block;
+}
+
+main #contact #contact-right #contact-form .floating input:invalid,
+main #contact #contact-right #contact-form .floating textarea:invalid {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+main #contact #contact-right #contact-form .floating .floating-input {
+  padding: 1.8rem 1rem 0.6rem;
+  -webkit-transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease;
+  caret-color: #d20040;
+  border-bottom: 0.1rem solid;
+}
+
+main #contact #contact-right #contact-form .floating .floating-input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0);
+}
+
+main #contact #contact-right #contact-form .floating .floating-input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0);
+}
+
+main #contact #contact-right #contact-form .floating .floating-input::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0);
+}
+
+main #contact #contact-right #contact-form .floating .floating-input::placeholder {
+  color: rgba(0, 0, 0, 0);
+}
+
+main #contact #contact-right #contact-form .floating .floating-input:focus + .floating-label::after {
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+  opacity: 1;
+}
+
+main #contact #contact-right #contact-form .floating .floating-input:placeholder-shown + .floating-label::before {
+  -webkit-transform: translate3d(0, -2.2rem, 0) scale3d(1, 1, 1);
+          transform: translate3d(0, -2.2rem, 0) scale3d(1, 1, 1);
+}
+
+main #contact #contact-right #contact-form .floating .floating-label {
+  display: block;
+  position: relative;
+  max-height: 0;
+  font-weight: 400;
+  pointer-events: none;
+}
+
+main #contact #contact-right #contact-form .floating .floating-label::before {
+  content: attr(data-content);
+  -webkit-filter: blur(0);
+          filter: blur(0);
+  color: #2f2f2f;
+  display: inline-block;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+  left: 1rem;
+  position: relative;
+}
+
+main #contact #contact-right #contact-form .floating .floating-label::after {
+  content: '';
+  bottom: 1rem;
+  height: 2px;
+  position: absolute;
+  -webkit-transition: opacity 180ms cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, -webkit-transform 180ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 180ms cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, -webkit-transform 180ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 180ms cubic-bezier(0.4, 0, 0.2, 1), opacity 180ms cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
+  transition: transform 180ms cubic-bezier(0.4, 0, 0.2, 1), opacity 180ms cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, -webkit-transform 180ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  left: 0;
+  top: 100%;
+  margin-top: -0.1rem;
+  -webkit-transform: scale3d(0, 1, 1);
+          transform: scale3d(0, 1, 1);
+  width: 100%;
+  background-color: #d20040;
+}
+
+main #contact #contact-right #contact-form .floating .floating-label::before,
+main #contact #contact-right #contact-form .floating .floating-input:focus + .floating-label::before {
+  -webkit-transform: translate3d(0, -3.4rem, 0) scale3d(0.82, 0.82, 1);
+          transform: translate3d(0, -3.4rem, 0) scale3d(0.82, 0.82, 1);
+}
+
+main #contact #contact-right #contact-form .floating textarea.floating-input + .floating-label::before,
+main #contact #contact-right #contact-form .floating textarea.floating-input:focus + .floating-label::before {
+  -webkit-transform: translate3d(0, -6rem, 0) scale3d(0.82, 0.82, 1);
+          transform: translate3d(0, -6rem, 0) scale3d(0.82, 0.82, 1);
+}
+
+main #contact #contact-right #contact-form .floating .floating-input:focus + .floating-label::before {
+  color: #d20040;
+}
+
+main #contact #contact-right #contact-form .floating.ta {
+  position: relative;
+}
+
+main #contact #contact-right #contact-form .floating.ta:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 25px;
+  background: white;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+main #contact #contact-right #contact-form .floating.ta:hover:before, main #contact #contact-right #contact-form .floating.ta:focus-within:before {
+  background: #f1f1f1;
+}
+
+main #contact #contact-right #contact-form .floating > textarea {
+  height: 100px;
+}
+
+main #contact #contact-right #contact-form .btn {
+  background: transparent;
+  color: #d20040;
+  border: 1px solid #d20040;
+  margin-left: auto;
+}
+
+main #about {
+  background: #600c25;
+}
+
+main #about #about-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1650px;
+}
+
+main #about #about-head h2 {
+  color: white;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  display: block;
+}
+
+main #about #about-head #headshot {
+  border-radius: 50%;
+  width: 125px;
+  height: 125px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  position: relative;
+  bottom: 1.5em;
+  -webkit-box-shadow: 3px 3px 10px #f2c344;
+          box-shadow: 3px 3px 10px #f2c344;
+}
+
+main #about #about-head #headshot img {
+  width: 100%;
+  height: 100%;
+}
+
+main #about #about-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+  max-width: 1400px;
+  margin: 4em auto 0 auto;
+  padding-bottom: 4em;
+  position: relative;
+}
+
+main #about #about-content p {
+  display: block;
+  color: white;
+  width: 100%;
+}
+
+main #about #about-content p::after {
+  content: '';
+  margin: 3em auto;
+  width: 100%;
+  height: 1px;
+  background: #f2c344;
+  display: block;
+}
+
+main #about #about-content p:last-child::after {
+  display: none;
+}
+
+@media only screen and (min-width: 375px) {
+  main #hero #cubes {
+    height: 150px;
+    width: 150px;
+    gap: 12px;
+  }
+  main #hero #goto-projects {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (min-width: 630px) {
+  body {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  header {
+    width: 5em;
+    height: 100vh;
+  }
+  header #logo {
+    display: block;
+  }
+  header #main-nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 60%;
+    margin-bottom: 6em;
+  }
+  main {
+    margin-top: unset;
+    margin-left: 5em;
+  }
+  main #hero {
+    height: 55vh;
+  }
+  main #hero #cubes {
+    bottom: 10vw;
+    right: 10vw;
+  }
+  main #hero #hero-text h1 {
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+  }
+  main #hero #hero-text p {
+    margin-left: 2em;
+  }
+  main #projects #projects-head {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    bottom: 0;
+    margin-top: -5em;
+    margin-bottom: 5em;
+  }
+  main #projects #projects-head h2 {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  main #projects #projects-head img {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-right: 1em;
+  }
+  main #projects #projects-head a {
+    bottom: 0;
+    right: 10vw;
+    left: unset;
+    -webkit-transform: unset;
+            transform: unset;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  main #contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main #contact #contact-left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 50%;
+  }
+  main #contact #contact-right {
+    width: 50%;
+  }
+  main #projects .project {
+    width: 90%;
+    margin: 2em auto 0 auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 2em;
+  }
+  main #projects .project .project-info {
+    width: 55%;
+  }
+  main #projects .project .project-image {
+    width: 45%;
+  }
+  main #about #about-content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  main #about #about-content p {
+    display: block;
+    position: relative;
+    margin-right: 1em;
+    padding: 1em;
+  }
+  main #about #about-content p:first-child {
+    text-align: end;
+  }
+  main #about #about-content p::after {
+    width: 1px;
+    height: 100%;
+    margin: auto 0;
+    right: -0.55em;
+    top: 0;
+    position: absolute;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  main #hero {
+    height: 40vh;
+  }
+  main #hero::after {
+    border-width: 0 0 5vw 100vw;
+  }
+  main #hero #hero-text {
+    width: 60%;
+    margin: 1em 0 0 5em;
+  }
+  main #hero #goto-projects {
+    left: 40%;
+    bottom: 2.25vw;
+    font-size: 56px;
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+  }
+  main #hero #cubes {
+    bottom: 6.5vw;
+  }
+  main #skills {
+    padding-bottom: 15.5em;
+  }
+  main #skills::after {
+    border-width: 0 0 5vw 100vw;
+  }
+  main #contact #contact-left {
+    width: 55%;
+  }
+  main #contact #contact-right {
+    width: 45%;
+  }
+  main #about #about-head #headshot {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  :root {
+    font-size: 18px;
+  }
+  main #hero #cubes {
+    width: 175px;
+    height: 175px;
+  }
+  main #projects #projects-head a {
+    right: 7vw;
+  }
+  main #contact #contact-left {
+    width: 60%;
+  }
+  main #contact #contact-right {
+    width: 40%;
+  }
+  main #contact #contact-right #contact-form .floating textarea.floating-input + .floating-label::before,
+  main #contact #contact-right #contact-form .floating textarea.floating-input:focus + .floating-label::before {
+    -webkit-transform: translate3d(0, -5.4rem, 0) scale3d(0.82, 0.82, 1);
+            transform: translate3d(0, -5.4rem, 0) scale3d(0.82, 0.82, 1);
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  main #hero #hero-text {
+    margin-top: 2em;
+    margin-left: 8em;
+  }
+  main #hero #cubes {
+    width: 200px;
+    height: 200px;
+  }
+  main #skills h2 {
+    margin-right: 6%;
+  }
+  main #projects #projects-head img {
+    max-width: 670px;
+  }
+  main #projects #projects-head a {
+    right: 12vw;
+  }
+  main #projects .project {
+    padding-bottom: 1em;
+  }
+  main #contact #contact-right h2 {
+    margin-right: 15%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

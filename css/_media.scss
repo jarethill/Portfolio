@@ -1,0 +1,296 @@
+// Mobile
+@media only screen and (min-width: 375px) {
+    main {
+        #hero {
+            #cubes {
+                height: 150px;
+                width: 150px;
+                gap: 12px;
+            }
+
+            #goto-projects {
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+// Tablet
+@media only screen and (min-width: 630px) {
+    body {
+        flex-direction: row;
+    }
+
+    header {
+        width: $header-length;
+        height: 100vh;
+
+        #logo {
+            display: block;
+        }
+
+        #main-nav {
+            ul {
+                flex-direction: column;
+                height: 60%;
+                margin-bottom: 6em;
+            }
+        }
+    }
+
+    main {
+        margin-top: unset;
+        margin-left: $header-length;
+
+        #hero {
+            height: 55vh;
+
+            #cubes {
+                bottom: 10vw;
+                right: 10vw;
+            }
+
+            #hero-text {
+                h1 {
+                    font-size: 2.25rem;
+                    line-height: 2.25rem;
+                }
+
+                p {
+                    margin-left: 2em;
+                }
+            }
+        }
+
+        #projects {
+            #projects-head {
+                flex-direction: row;
+                bottom: 0;
+                margin-top: -5em;
+                margin-bottom: 5em;
+
+                h2 {
+                    order: 1;
+                    align-self: center;
+                }
+
+                img {
+                    order: 2;
+                    margin-right: 1em;
+                }
+
+                a {
+                    bottom: 0;
+                    right: 10vw;
+                    left: unset;
+                    transform: unset;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    main {
+        #contact {
+            display: flex;
+
+            #contact-left {
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+            }
+
+            #contact-right {
+                width: 50%;
+            }
+        }
+
+        #projects {
+            .project {
+                width: $mobile-margin;
+                margin: 2em auto 0 auto;
+                flex-direction: row;
+                padding: 2em;
+
+                .project-info {
+                    width: 55%;
+                }
+
+                .project-image {
+                    width: 45%;
+                }
+            }
+        }
+
+        #about {
+            #about-content {
+                flex-direction: row;
+
+                p {
+                    display: block;
+                    position: relative;
+                    margin-right: 1em;
+                    padding: 1em;
+
+                    &:first-child {
+                        text-align: end;
+                    }
+
+                    &::after {
+                        width: 1px;
+                        height: 100%;
+                        margin: auto 0;
+                        right: -0.55em;
+                        top: 0;
+                        position: absolute;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    main {
+        #hero {
+            height: 40vh;
+
+            &::after {
+                border-width: 0 0 5vw 100vw;
+            }
+
+            #hero-text {
+                width: 60%;
+                margin: 1em 0 0 5em;
+            }
+
+            #goto-projects {
+                left: 40%;
+                bottom: 2.25vw;
+                font-size: 56px;
+                transform: rotate(-3deg);
+            }
+
+            #cubes {
+                bottom: 6.5vw;
+            }
+        }
+
+        #skills {
+            padding-bottom: 15.5em;
+
+            &::after {
+                border-width: 0 0 5vw 100vw;
+            }
+        }
+
+        #contact {
+            #contact-left {
+                width: 55%;
+            }
+
+            #contact-right {
+                width: 45%;
+            }
+        }
+
+        #about {
+            #about-head {
+                #headshot {
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+        }
+    }
+}
+
+// Desktop
+@media only screen and (min-width: 1200px) {
+    :root {
+        font-size: 18px;
+    }
+
+    main {
+        #hero {
+            #cubes {
+                width: 175px;
+                height: 175px;
+            }
+        }
+
+        #projects {
+            #projects-head {
+                a {
+                    right: 7vw;
+                }
+            }
+        }
+
+        #contact {
+            #contact-left {
+                width: 60%;
+            }
+
+            #contact-right {
+                width: 40%;
+
+                #contact-form {
+                    .floating {
+                        textarea.floating-input + .floating-label::before,
+                        textarea.floating-input:focus + .floating-label::before {
+                            transform: translate3d(0, -5.4rem, 0) scale3d(0.82, 0.82, 1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    main {
+        #hero {
+            #hero-text {
+                margin-top: 2em;
+                margin-left: 8em;
+            }
+
+            #cubes {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        #skills {
+            h2 {
+                margin-right: 6%;
+            }
+        }
+
+        #projects {
+            #projects-head {
+                img {
+                    max-width: 670px;
+                }
+
+                a {
+                    right: 12vw;
+                }
+            }
+
+            .project {
+                padding-bottom: 1em;
+            }
+        }
+
+        #contact {
+            #contact-right {
+                h2 {
+                    margin-right: 15%;
+                }
+            }
+        }
+    }
+}

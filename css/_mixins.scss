@@ -1,0 +1,20 @@
+@mixin underline {
+    content: '';
+    display: block;
+    height: 2px;
+    background: $highlight-primary;
+}
+
+// Creates triangle at bottom of element, used to create skewed appearance
+@mixin triangle {
+    content: '';
+    border-color: transparent transparent #ffffff transparent;
+    border-style: solid;
+    border-width: 0 0 10vw 100vw;
+    height: 0;
+    width: 0;
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    background: $bg-primary;
+}
