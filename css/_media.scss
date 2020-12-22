@@ -5,7 +5,7 @@
             #cubes {
                 height: 150px;
                 width: 150px;
-                gap: 12px;
+                gap: 15px;
             }
 
             #goto-projects {
@@ -34,6 +34,15 @@
                 flex-direction: column;
                 height: 60%;
                 margin-bottom: 6em;
+
+                li {
+                    a {
+                        p {
+                            transform: translateY(0);
+                            transform: translateX(-200px);
+                        }
+                    }
+                }
             }
         }
     }
@@ -92,6 +101,24 @@
 
 @media only screen and (min-width: 800px) {
     main {
+        .tooltip {
+            left: initial;
+            right: -8px;
+
+            .tooltip-text {
+                right: initial;
+                left: 150%;
+                width: 200px;
+                top: -30px;
+
+                &::after {
+                    left: initial;
+                    right: 100%;
+                    border-color: transparent $highlight-primary transparent transparent;
+                }
+            }
+        }
+
         #contact {
             display: flex;
 

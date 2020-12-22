@@ -285,6 +285,62 @@ h2 {
   font-size: 2rem;
 }
 
+.tooltip {
+  position: absolute;
+  display: inline-block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 20px;
+  left: -8px;
+  color: white;
+  height: 20px;
+  font-size: 18px;
+  padding-left: 8px;
+  line-height: 22px;
+  background: rgba(0, 0, 0, 0.246);
+  border-radius: 50%;
+  z-index: 100;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  width: 120px;
+  background-color: #d20040;
+  color: #f0e3e3;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  top: -50px;
+  right: 150%;
+}
+
+.tooltip .tooltip-text::after {
+  content: ' ';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent #d20040;
+}
+
+.tooltip:hover {
+  background: #0f0f0f;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 .hidden-visually {
   border: 0;
   clip: rect(1px 1px 1px 1px);
@@ -331,6 +387,13 @@ h2 {
 
 .btn a {
   color: white;
+}
+
+.btn:hover {
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 header {
@@ -408,12 +471,53 @@ header #main-nav ul li {
           justify-content: center;
 }
 
+header #main-nav ul li:hover i {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
+
+header #main-nav ul li:hover p {
+  visibility: visible;
+  width: unset;
+  height: unset;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+
 header #main-nav ul li a {
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header #main-nav ul li a p {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  font-size: 1.3rem;
+  color: #f0e3e3;
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
 }
 
 header #main-nav ul li a i {
   font-size: 28px;
+  opacity: 1;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
 }
 
 main {
@@ -478,7 +582,6 @@ main #hero #hero-text p {
 
 main #hero #goto-projects {
   color: white;
-  -webkit-text-stroke: 0.4px #d20040;
   position: absolute;
   bottom: 0.3em;
   left: 0.2em;
@@ -490,6 +593,12 @@ main #hero #goto-projects {
   font-size: 40px;
 }
 
+main #hero #goto-projects:hover {
+  color: black;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 main #hero #cubes {
   display: -ms-grid;
   display: grid;
@@ -497,7 +606,7 @@ main #hero #cubes {
       grid-template-columns: repeat(2, 1fr);
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
-  gap: 15px !important;
+  gap: 8px;
   height: 100px;
   width: 100px;
   position: absolute;
@@ -666,6 +775,12 @@ main #projects #projects-head a {
           transform: translateX(-50%);
 }
 
+main #projects #projects-head a:hover {
+  color: #f2c344;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 main #projects .project {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -712,8 +827,8 @@ main #projects .project .project-info h3::after {
   display: block;
   height: 2px;
   background: #d20040;
-  width: 30%;
-  margin-left: 8%;
+  width: 20%;
+  margin-left: 5%;
 }
 
 main #projects .project .project-info p {
@@ -738,90 +853,6 @@ main #projects .project .project-info .project-links .github-container {
   max-width: 58px;
   height: auto;
   position: relative;
-}
-
-main #projects .project .project-info .project-links .github-container .tooltip {
-  display: block;
-  position: absolute;
-  top: -0.4em;
-  right: -0.5em;
-  color: white;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.281);
-  padding-left: 0.52em;
-  z-index: 998;
-  font-weight: bold;
-  font-size: 16px;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-main #projects .project .project-info .project-links .github-container .tooltip:hover {
-  background: #181818;
-}
-
-main #projects .project .project-info .project-links .github-container .tooltip:hover:before, main #projects .project .project-info .project-links .github-container .tooltip:hover:after {
-  opacity: 1;
-}
-
-main #projects .project .project-info .project-links .github-container .tooltip::before {
-  content: attr(data-text);
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  left: 100%;
-  margin-left: 15px;
-  padding: 10px;
-  border-radius: 10px;
-  color: black;
-  text-align: center;
-  background: #f2c344;
-  opacity: 0;
-  pointer-events: none;
-  -webkit-transition: 0.3s opacity;
-  transition: 0.3s opacity;
-  font-weight: 300;
-}
-
-@media only screen and (min-width: 280px) {
-  main #projects .project .project-info .project-links .github-container .tooltip::before {
-    width: 125px !important;
-  }
-}
-
-@media only screen and (min-width: 320px) {
-  main #projects .project .project-info .project-links .github-container .tooltip::before {
-    width: 150px !important;
-  }
-}
-
-@media only screen and (min-width: 375px) {
-  main #projects .project .project-info .project-links .github-container .tooltip::before {
-    width: 200px !important;
-  }
-}
-
-main #projects .project .project-info .project-links .github-container .tooltip::after {
-  content: '';
-  position: absolute;
-  left: 100%;
-  margin-left: -5px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  border: 10px solid #f2c344;
-  border-color: transparent #f2c344 transparent transparent;
-  pointer-events: none;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
 }
 
 main #projects .project .project-info .project-links .github-container img {
@@ -1027,6 +1058,13 @@ main #contact #contact-right #contact-form .btn {
   margin-left: auto;
 }
 
+main #contact #contact-right #contact-form .btn:hover {
+  background: #d20040;
+  color: white;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 main #about {
   background: #600c25;
 }
@@ -1116,7 +1154,7 @@ main #about #about-content p:last-child::after {
   main #hero #cubes {
     height: 150px;
     width: 150px;
-    gap: 12px;
+    gap: 15px;
   }
   main #hero #goto-projects {
     font-size: 3rem;
@@ -1144,6 +1182,12 @@ main #about #about-content p:last-child::after {
             flex-direction: column;
     height: 60%;
     margin-bottom: 6em;
+  }
+  header #main-nav ul li a p {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform: translateX(-200px);
+            transform: translateX(-200px);
   }
   main {
     margin-top: unset;
@@ -1196,6 +1240,21 @@ main #about #about-content p:last-child::after {
 }
 
 @media only screen and (min-width: 800px) {
+  main .tooltip {
+    left: initial;
+    right: -8px;
+  }
+  main .tooltip .tooltip-text {
+    right: initial;
+    left: 150%;
+    width: 200px;
+    top: -30px;
+  }
+  main .tooltip .tooltip-text::after {
+    left: initial;
+    right: 100%;
+    border-color: transparent #d20040 transparent transparent;
+  }
   main #contact {
     display: -webkit-box;
     display: -ms-flexbox;

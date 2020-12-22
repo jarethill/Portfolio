@@ -6,8 +6,8 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script defer src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <link rel="stylesheet" href="css/aos.css" />
+    <script defer src="js/aos.js"></script>
     <script defer src="js/main.js"></script>
 </head>
 <body>
@@ -17,26 +17,32 @@
             <ul>
                 <li>
                     <a href="#" >
+                        <p>Home</p>
                         <i class="fas fa-home"></i>
                     </a>
+                    
                 </li>
                 <li>
                     <a href="#to-skills">
+                        <p>Skills</p>
                         <i class="fas fa-award"></i>
                     </a>
                 </li>
                 <li>
                     <a href="#to-projects">
+                        <p>Projects</p>
                         <i class="fas fa-code"></i>
                     </a>
                 </li>
                 <li>
                     <a href="#to-contact">
+                        <p>Contact</p>
                         <i class="fas fa-envelope"></i>
                     </a>
                 </li>
                 <li>
                     <a href="#to-about">
+                        <p>About</p>
                         <i class="fas fa-user"></i>
                     </a>
                 </li>
@@ -104,7 +110,7 @@
                 <img data-aos="fade-right" data-aos-anchor="#backend" data-aos-mirror="true" src="images/svg/expressjs.svg" alt="express" title="express">
             </div>
 
-            <h3 id="other" data-aos="fade-left" data-aos-mirror="true" data-aos-duration="1000" data-aos-mirror="#backend">Other</h3>
+            <h3 id="other" data-aos="fade-right" data-aos-mirror="true" data-aos-duration="1000" data-aos-mirror="#backend">Other</h3>
 
             <div class="logos">
                 <img data-aos="fade-left" data-aos-anchor="#other" data-aos-mirror="true" src="images/svg/python.svg" alt="Python" title="Python">
@@ -416,7 +422,13 @@
                     <div class="project-links">
                         <a href="https://dotadraft.net" target="_blank" rel="noopener noreferrer" class="btn" role="button">Visit Site</a>
                         <div class="github-container">
-                            <span data-text="This is a private repo, source code available in interview." class="tooltip">!</span>
+                            <div class="tooltip">
+                                !
+                                <span class="tooltip-text">
+                                    This is a private repo, source code available in interview.
+                                </span>
+                            </div>
+                            <!-- <span data-text="This is a private repo, source code available in interview." class="testtip">!</span> -->
                             <img data-transparent="true" src="images/svg/github.svg" alt="Github">
                         </div>
                     </div>
@@ -483,6 +495,7 @@
                     id="contact-form"
                     data-aos="fade"
                     data-aos-mirror="true"
+                    data-aos-duration="1500"
                 >
                     <div class="floating">
                         <input id="name" class="floating-input" name="name" type="text" placeholder="Name" required/>

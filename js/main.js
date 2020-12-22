@@ -7,11 +7,11 @@
     // Add stagger effect to skill logos
     const logos = [...document.querySelectorAll('.logos > img')];
 
-    const delayAmount = 50;
-    let startingDelay = delayAmount;
+    const delayIncrement = 100;
+    let startingDelay = 200;
 
     logos.forEach((logo) => {
         logo.dataset.aosDelay = startingDelay;
-        startingDelay += delayAmount;
+        startingDelay += delayIncrement;
     });
 })();
