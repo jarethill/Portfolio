@@ -1,0 +1,127 @@
+// Keyframes
+
+// Projects Illustration
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes glow {
+    100% {
+        fill: #fff;
+    }
+}
+
+@keyframes dangle {
+    0% {
+        transform: translateY(0%);
+    }
+
+    25% {
+        transform: translateY(10%);
+    }
+
+    50% {
+        transform: translateY(0%);
+    }
+
+    75% {
+        transform: translateY(-20%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes invisible {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes beckon {
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+@keyframes rainbow {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes shadow-glow {
+    0% {
+    }
+
+    100% {
+        box-shadow: 3px 3px 10px $highlight-secondary;
+    }
+}
+// Rules
+
+// Projects Illustration
+svg {
+    #illustration-1 {
+        #big-cog {
+            animation: spin 10s infinite linear;
+            transform-origin: center center;
+            transform-box: fill-box;
+        }
+
+        #small-cog {
+            animation: spin 10s infinite linear;
+            animation-direction: reverse;
+            transform-origin: center center;
+            transform-box: fill-box;
+        }
+
+        #arrow {
+            transform-origin: left left;
+            transform-box: fill-box;
+        }
+
+        #hanging-cog {
+            animation: dangle 12s infinite ease-out;
+            transform-origin: top top;
+            transform-box: fill-box;
+        }
+
+        #drawn-big-cog {
+            animation: invisible 3s infinite alternate;
+        }
+
+        #light-bulb > path {
+            animation: glow 1s infinite alternate;
+        }
+
+        #left-arm {
+            animation: beckon 1s infinite alternate;
+            transform-origin: center center;
+            transform-box: fill-box;
+        }
+
+        #woman-message {
+            animation: invisible 5s infinite alternate;
+        }
+
+        #man-message {
+            animation: invisible 5s infinite alternate-reverse;
+        }
+    }
+}

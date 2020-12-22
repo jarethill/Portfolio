@@ -12,6 +12,11 @@
     scrollbar-width: 10px;
 }
 
+::selection {
+    background: transparent;
+    color: $highlight-primary;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -70,6 +75,11 @@ h2 {
     width: 1px;
 }
 
+.hidden {
+    pointer-events: none;
+    opacity: 0;
+}
+
 .parallax {
     background-position: center !important;
     background-attachment: fixed !important;
@@ -78,15 +88,16 @@ h2 {
 }
 
 .btn {
-    background: $highlight-primary;
+    background: $highlight-secondary;
     border: none;
     border-radius: 8px;
-    color: white;
+    color: black;
     font-size: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px 15px;
+    font-family: 'Nunito', sans-serif;
     cursor: pointer;
 
     a {
@@ -113,6 +124,7 @@ header {
         margin: 2em auto 0 auto;
         text-align: center;
         position: relative;
+        user-select: none;
 
         &::after {
             content: '';
@@ -122,7 +134,7 @@ header {
             left: 1em;
             width: 100%;
             height: 2px;
-            background: $bg-primary;
+            background: $highlight-secondary;
         }
     }
 
@@ -214,7 +226,7 @@ main {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 1fr);
-            gap: 8px;
+            gap: 15px !important;
             height: 100px;
             width: 100px;
             position: absolute;
@@ -228,14 +240,15 @@ main {
                 border-radius: 7px;
                 position: relative;
 
-                &:last-child {
-                    background: $highlight-primary;
-                    left: 2.5em;
-                    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
-                }
-
                 &:nth-child(3) {
                     left: 2.5em;
+                }
+
+                &:last-child {
+                    background: $highlight-secondary;
+                    left: 2.5em;
+                    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+                    animation: rainbow 5s infinite alternate, spin 5s infinite alternate;
                 }
             }
         }
@@ -331,7 +344,7 @@ main {
                 margin-top: 2em;
             }
 
-            img {
+            svg {
                 width: 100%;
                 max-width: 450px;
                 height: auto;
@@ -686,7 +699,7 @@ main {
                 overflow: hidden;
                 position: relative;
                 bottom: 1.5em;
-                box-shadow: 3px 3px 10px $highlight-secondary;
+                animation: shadow-glow 2s infinite alternate;
 
                 img {
                     width: 100%;
@@ -703,6 +716,7 @@ main {
             margin: 4em auto 0 auto;
             padding-bottom: 4em;
             position: relative;
+            overflow: hidden;
 
             p {
                 display: block;

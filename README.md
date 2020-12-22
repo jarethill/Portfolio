@@ -1,3 +1,3 @@
 # Portfolio
 
-My professional portfolio, written with HTML & SCSS. Javascript used only for form submission.
+My professional portfolio; written with HTML, SCSS, and Vanilla Javascript.

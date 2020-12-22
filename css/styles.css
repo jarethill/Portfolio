@@ -1,5 +1,214 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap");
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes glow {
+  100% {
+    fill: #fff;
+  }
+}
+
+@keyframes glow {
+  100% {
+    fill: #fff;
+  }
+}
+
+@-webkit-keyframes dangle {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  25% {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+  }
+  50% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  75% {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes dangle {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  25% {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+  }
+  50% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  75% {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes invisible {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes invisible {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes beckon {
+  100% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+}
+
+@keyframes beckon {
+  100% {
+    -webkit-transform: rotate(5deg);
+            transform: rotate(5deg);
+  }
+}
+
+@-webkit-keyframes rainbow {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@-webkit-keyframes shadow-glow {
+  0% {
+  }
+  100% {
+    -webkit-box-shadow: 3px 3px 10px #f2c344;
+            box-shadow: 3px 3px 10px #f2c344;
+  }
+}
+
+@keyframes shadow-glow {
+  0% {
+  }
+  100% {
+    -webkit-box-shadow: 3px 3px 10px #f2c344;
+            box-shadow: 3px 3px 10px #f2c344;
+  }
+}
+
+svg #illustration-1 #big-cog {
+  -webkit-animation: spin 10s infinite linear;
+          animation: spin 10s infinite linear;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  transform-box: fill-box;
+}
+
+svg #illustration-1 #small-cog {
+  -webkit-animation: spin 10s infinite linear;
+          animation: spin 10s infinite linear;
+  animation-direction: reverse;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  transform-box: fill-box;
+}
+
+svg #illustration-1 #arrow {
+  -webkit-transform-origin: left left;
+          transform-origin: left left;
+  transform-box: fill-box;
+}
+
+svg #illustration-1 #hanging-cog {
+  -webkit-animation: dangle 12s infinite ease-out;
+          animation: dangle 12s infinite ease-out;
+  -webkit-transform-origin: top top;
+          transform-origin: top top;
+  transform-box: fill-box;
+}
+
+svg #illustration-1 #drawn-big-cog {
+  -webkit-animation: invisible 3s infinite alternate;
+          animation: invisible 3s infinite alternate;
+}
+
+svg #illustration-1 #light-bulb > path {
+  -webkit-animation: glow 1s infinite alternate;
+          animation: glow 1s infinite alternate;
+}
+
+svg #illustration-1 #left-arm {
+  -webkit-animation: beckon 1s infinite alternate;
+          animation: beckon 1s infinite alternate;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  transform-box: fill-box;
+}
+
+svg #illustration-1 #woman-message {
+  -webkit-animation: invisible 5s infinite alternate;
+          animation: invisible 5s infinite alternate;
+}
+
+svg #illustration-1 #man-message {
+  animation: invisible 5s infinite alternate-reverse;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +222,16 @@
   scroll-behavior: smooth;
   scrollbar-color: #f2c344 #ececec;
   scrollbar-width: 10px;
+}
+
+::-moz-selection {
+  background: transparent;
+  color: #d20040;
+}
+
+::selection {
+  background: transparent;
+  color: #d20040;
 }
 
 ::-webkit-scrollbar {
@@ -78,6 +297,11 @@ h2 {
   width: 1px;
 }
 
+.hidden {
+  pointer-events: none;
+  opacity: 0;
+}
+
 .parallax {
   background-position: center !important;
   background-attachment: fixed !important;
@@ -86,10 +310,10 @@ h2 {
 }
 
 .btn {
-  background: #d20040;
+  background: #f2c344;
   border: none;
   border-radius: 8px;
-  color: white;
+  color: black;
   font-size: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -101,6 +325,7 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   padding: 10px 15px;
+  font-family: 'Nunito', sans-serif;
   cursor: pointer;
 }
 
@@ -128,6 +353,10 @@ header #logo {
   margin: 2em auto 0 auto;
   text-align: center;
   position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 header #logo::after {
@@ -138,7 +367,7 @@ header #logo::after {
   left: 1em;
   width: 100%;
   height: 2px;
-  background: #9d0030;
+  background: #f2c344;
 }
 
 header #main-nav {
@@ -268,7 +497,7 @@ main #hero #cubes {
       grid-template-columns: repeat(2, 1fr);
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
-  gap: 8px;
+  gap: 15px !important;
   height: 100px;
   width: 100px;
   position: absolute;
@@ -285,15 +514,17 @@ main #hero #cubes .cube {
   position: relative;
 }
 
+main #hero #cubes .cube:nth-child(3) {
+  left: 2.5em;
+}
+
 main #hero #cubes .cube:last-child {
-  background: #d20040;
+  background: #f2c344;
   left: 2.5em;
   -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
           box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
-}
-
-main #hero #cubes .cube:nth-child(3) {
-  left: 2.5em;
+  -webkit-animation: rainbow 5s infinite alternate, spin 5s infinite alternate;
+          animation: rainbow 5s infinite alternate, spin 5s infinite alternate;
 }
 
 main #skills {
@@ -417,7 +648,7 @@ main #projects #projects-head h2 {
   margin-top: 2em;
 }
 
-main #projects #projects-head img {
+main #projects #projects-head svg {
   width: 100%;
   max-width: 450px;
   height: auto;
@@ -837,8 +1068,8 @@ main #about #about-head #headshot {
   overflow: hidden;
   position: relative;
   bottom: 1.5em;
-  -webkit-box-shadow: 3px 3px 10px #f2c344;
-          box-shadow: 3px 3px 10px #f2c344;
+  -webkit-animation: shadow-glow 2s infinite alternate;
+          animation: shadow-glow 2s infinite alternate;
 }
 
 main #about #about-head #headshot img {
@@ -859,6 +1090,7 @@ main #about #about-content {
   margin: 4em auto 0 auto;
   padding-bottom: 4em;
   position: relative;
+  overflow: hidden;
 }
 
 main #about #about-content p {
@@ -948,7 +1180,7 @@ main #about #about-content p:last-child::after {
         -ms-grid-row-align: center;
         align-self: center;
   }
-  main #projects #projects-head img {
+  main #projects #projects-head svg {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
@@ -1097,7 +1329,7 @@ main #about #about-content p:last-child::after {
   main #skills h2 {
     margin-right: 6%;
   }
-  main #projects #projects-head img {
+  main #projects #projects-head svg {
     max-width: 670px;
   }
   main #projects #projects-head a {
