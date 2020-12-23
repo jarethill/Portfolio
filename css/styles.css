@@ -225,12 +225,12 @@ svg #illustration-1 #man-message {
 }
 
 ::-moz-selection {
-  background: transparent;
+  background: white;
   color: #d20040;
 }
 
 ::selection {
-  background: transparent;
+  background: white;
   color: #d20040;
 }
 
@@ -248,7 +248,7 @@ svg #illustration-1 #man-message {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #d8ab2f;
+  background: #e2af21;
 }
 
 body {
@@ -308,8 +308,8 @@ h2 {
   visibility: hidden;
   opacity: 0;
   width: 120px;
-  background-color: #d20040;
-  color: #f0e3e3;
+  background-color: #f2c344;
+  color: black;
   text-align: center;
   padding: 5px 0;
   border-radius: 6px;
@@ -327,7 +327,7 @@ h2 {
   margin-top: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: transparent transparent transparent #d20040;
+  border-color: transparent transparent transparent #f2c344;
 }
 
 .tooltip:hover {
@@ -390,8 +390,8 @@ h2 {
 }
 
 .btn:hover {
-  -webkit-filter: brightness(1.2);
-          filter: brightness(1.2);
+  -webkit-filter: brightness(1.3);
+          filter: brightness(1.3);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -526,7 +526,10 @@ main {
 }
 
 main #hero {
-  background: #9d0030;
+  background: url("../images/triangles.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 75vh;
   width: 100%;
   position: relative;
@@ -544,6 +547,8 @@ main #hero::after {
   position: absolute;
   left: 0;
   background: #9d0030;
+  background: #9d0030;
+  background: linear-gradient(111deg, #9d0030 0%, #d20040 40%, #d20040 45%, #f2c344 100%);
 }
 
 main #hero #hero-text {
@@ -628,7 +633,7 @@ main #hero #cubes .cube:nth-child(3) {
 }
 
 main #hero #cubes .cube:last-child {
-  background: #f2c344;
+  background: #ff89ff;
   left: 2.5em;
   -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
           box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
@@ -797,6 +802,18 @@ main #projects .project {
   margin-bottom: 5em;
 }
 
+main #projects .project:hover {
+  background: #d20040;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+main #projects .project:hover > .project-info > h3::after {
+  background: #f2c344;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 main #projects .project:last-child {
   margin-bottom: 3.5em;
 }
@@ -820,6 +837,9 @@ main #projects .project .project-info h3 {
   font-weight: bold;
   margin-left: 0.5em;
   margin: 0 0 1.25em 0.5em;
+  padding: 15px;
+  display: block;
+  position: relative;
 }
 
 main #projects .project .project-info h3::after {
@@ -827,7 +847,7 @@ main #projects .project .project-info h3::after {
   display: block;
   height: 2px;
   background: #d20040;
-  width: 20%;
+  width: 40%;
   margin-left: 5%;
 }
 
@@ -853,6 +873,23 @@ main #projects .project .project-info .project-links .github-container {
   max-width: 58px;
   height: auto;
   position: relative;
+}
+
+main #projects .project .project-info .project-links .github-container a:hover {
+  opacity: 0.6;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+main #projects .project .project-info .project-links .github-container a::after {
+  content: 'source code';
+  position: absolute;
+  color: white;
+  bottom: 1em;
+  right: -1em;
+  width: 10px;
+  font-size: 0.9rem;
+  line-height: 10px;
 }
 
 main #projects .project .project-info .project-links .github-container img {
@@ -937,6 +974,10 @@ main #contact #contact-right #contact-form .floating .floating-input {
   transition: border-color 0.2s ease;
   caret-color: #d20040;
   border-bottom: 0.1rem solid;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 main #contact #contact-right #contact-form .floating .floating-input::-webkit-input-placeholder {
@@ -1162,6 +1203,16 @@ main #about #about-content p:last-child::after {
 }
 
 @media only screen and (min-width: 630px) {
+  :root {
+    scrollbar-color: #d20040 #ececec;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #d20040;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #9d0030;
+  }
   body {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1253,7 +1304,7 @@ main #about #about-content p:last-child::after {
   main .tooltip .tooltip-text::after {
     left: initial;
     right: 100%;
-    border-color: transparent #d20040 transparent transparent;
+    border-color: transparent #f2c344 transparent transparent;
   }
   main #contact {
     display: -webkit-box;
@@ -1284,6 +1335,9 @@ main #about #about-content p:last-child::after {
   }
   main #projects .project .project-info {
     width: 55%;
+  }
+  main #projects .project .project-info h3 {
+    padding: unset;
   }
   main #projects .project .project-image {
     width: 45%;

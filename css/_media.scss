@@ -17,6 +17,18 @@
 
 // Tablet
 @media only screen and (min-width: 630px) {
+    :root {
+        scrollbar-color: $highlight-primary rgb(236, 236, 236);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: $highlight-primary;
+        border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: $bg-primary;
+    }
+
     body {
         flex-direction: row;
     }
@@ -114,7 +126,7 @@
                 &::after {
                     left: initial;
                     right: 100%;
-                    border-color: transparent $highlight-primary transparent transparent;
+                    border-color: transparent $highlight-secondary transparent transparent;
                 }
             }
         }
@@ -142,6 +154,10 @@
 
                 .project-info {
                     width: 55%;
+
+                    h3 {
+                        padding: unset;
+                    }
                 }
 
                 .project-image {
