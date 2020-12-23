@@ -17,18 +17,6 @@
 
 // Tablet
 @media only screen and (min-width: 630px) {
-    :root {
-        scrollbar-color: $highlight-primary rgb(236, 236, 236);
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background: $highlight-primary;
-        border-radius: 3px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-        background: $bg-primary;
-    }
-
     body {
         flex-direction: row;
     }
@@ -77,7 +65,7 @@
                     line-height: 2.25rem;
                 }
 
-                p {
+                h2 {
                     margin-left: 2em;
                 }
             }

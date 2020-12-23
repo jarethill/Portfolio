@@ -305,7 +305,7 @@ main {
                 line-height: 2rem;
             }
 
-            p {
+            h2 {
                 display: block;
                 width: 90%;
                 margin: 1em auto 0 auto;
@@ -354,7 +354,7 @@ main {
                 }
 
                 &:last-child {
-                    background: rgb(255, 137, 255);
+                    background: $highlight-secondary;
                     left: 2.5em;
                     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
                     animation: rainbow 5s infinite alternate, spin 5s infinite alternate;
@@ -554,7 +554,7 @@ main {
                                 right: -1em;
                                 width: 10px;
                                 font-size: 0.9rem;
-                                line-height: 10px;
+                                line-height: 12px;
                             }
                         }
 

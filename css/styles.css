@@ -577,7 +577,7 @@ main #hero #hero-text h1 {
   line-height: 2rem;
 }
 
-main #hero #hero-text p {
+main #hero #hero-text h2 {
   display: block;
   width: 90%;
   margin: 1em auto 0 auto;
@@ -633,7 +633,7 @@ main #hero #cubes .cube:nth-child(3) {
 }
 
 main #hero #cubes .cube:last-child {
-  background: #ff89ff;
+  background: #f2c344;
   left: 2.5em;
   -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
           box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
@@ -889,7 +889,7 @@ main #projects .project .project-info .project-links .github-container a::after 
   right: -1em;
   width: 10px;
   font-size: 0.9rem;
-  line-height: 10px;
+  line-height: 12px;
 }
 
 main #projects .project .project-info .project-links .github-container img {
@@ -1203,16 +1203,6 @@ main #about #about-content p:last-child::after {
 }
 
 @media only screen and (min-width: 630px) {
-  :root {
-    scrollbar-color: #d20040 #ececec;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #d20040;
-    border-radius: 3px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: #9d0030;
-  }
   body {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1255,7 +1245,7 @@ main #about #about-content p:last-child::after {
     font-size: 2.25rem;
     line-height: 2.25rem;
   }
-  main #hero #hero-text p {
+  main #hero #hero-text h2 {
     margin-left: 2em;
   }
   main #projects #projects-head {
