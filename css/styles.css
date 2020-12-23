@@ -599,7 +599,7 @@ main #hero #goto-projects {
 }
 
 main #hero #goto-projects:hover {
-  color: black;
+  color: #242424;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
