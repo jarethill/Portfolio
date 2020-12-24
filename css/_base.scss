@@ -63,6 +63,14 @@ h2 {
     font-size: 2rem;
 }
 
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 .tooltip {
     position: absolute;
     display: inline-block;
@@ -236,8 +244,6 @@ header {
                     color: white;
                     display: flex;
                     flex-direction: column;
-                    user-select: none;
-                    outline: none;
 
                     p {
                         visibility: hidden;
