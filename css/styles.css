@@ -469,6 +469,11 @@ header #main-nav ul li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  outline: none;
 }
 
 header #main-nav ul li:hover i {
@@ -501,6 +506,11 @@ header #main-nav ul li a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  outline: none;
 }
 
 header #main-nav ul li a p {

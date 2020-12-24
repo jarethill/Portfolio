@@ -213,6 +213,8 @@ header {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                user-select: none;
+                outline: none;
 
                 &:hover i {
                     visibility: hidden;
@@ -234,6 +236,8 @@ header {
                     color: white;
                     display: flex;
                     flex-direction: column;
+                    user-select: none;
+                    outline: none;
 
                     p {
                         visibility: hidden;
