@@ -441,6 +441,24 @@
                 <img class="project-image" src="images/dotadraft.png" alt="Dota Draft">
             </div>
 
+            <div class="project" data-aos="slide-left" data-aos-mirror="true" data-aos-duration="600">
+                <div class="project-info">
+                    <h3>Sudoku Solver</h3>
+                    <p>A Sudoku solver built in React with Typescript. Uses Jest for Unit Testing. I took a different approach from traditional Sudoku solvers by using Object Oriented Programming to encapsulate the board, line, and cell logic into their respective classes. By doing it this way, each cell always keeps track via references of all the other cells in it's row/column/subgrid, which leads to much faster solve validation; since it doesn't have to manually iterate through each line on every cell. This approach also means the logic is completely seperated from the UI, making it easily portable to another frontend or even Vanilla Javascript. The solve also implements the backtracking algorithm so even the hardest puzzles are solved near instantanously.</p>
+                    <div class="project-links">
+                        <a href="https://jarethill.github.io/Sudoku-Solver" target="_blank" rel="noopener noreferrer" class="btn" role="button">Visit
+                            Site</a>
+                        <div class="github-container">
+                            <a href="https://github.com/jarethill/Sudoku-Solver" target="_blank" rel="noopener noreferrer" role="button">
+                                <img src="images/svg/github.svg" alt="Github">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            
+                <img class="project-image" src="images/sudoku.png" alt="Sudoku Solver">
+            </div>
+
             <div 
                 class="project"
                 data-aos="slide-right"    
@@ -545,7 +563,7 @@
                     data-aos-duration="750"
                     data-aos-mirror="true"
                 >
-                    <!-- <img src="images/headshot.jpg" alt="My picture"> -->
+                    <img src="images/headshot.jpg" alt="My picture">
                 </div>
             </div>
 
