@@ -18,3 +18,15 @@
     left: 0;
     background: $bg-primary;
 }
+
+@mixin hovered-btn {
+    background: $highlight-primary;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+@mixin errored-btn {
+    background: $bg-secondary;
+    color: white;
+    transition: all 0.3s ease;
+}

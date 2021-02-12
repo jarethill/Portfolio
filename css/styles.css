@@ -1110,10 +1110,26 @@ main #contact #contact-right #contact-form .btn {
   color: #d20040;
   border: 1px solid #d20040;
   margin-left: auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 main #contact #contact-right #contact-form .btn:hover {
   background: #d20040;
+  color: white;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+main #contact #contact-right #contact-form .btn.submitted {
+  background: #d20040;
+  color: white;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+main #contact #contact-right #contact-form .btn.errored {
+  background: #600c25;
   color: white;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;

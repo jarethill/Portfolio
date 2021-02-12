@@ -270,14 +270,6 @@ main {
     width: 100%;
 
     #hero {
-        // background: rgb(157, 0, 48);
-        // background: linear-gradient(
-        //     111deg,
-        //     rgba(157, 0, 48, 1) 0%,
-        //     rgba(210, 0, 64, 1) 40%,
-        //     rgba(210, 0, 64, 1) 45%,
-        //     rgba(242, 195, 68, 1) 100%
-        // );
         background: url('../images/triangles.png');
         background-position: center;
         background-repeat: no-repeat;
@@ -750,12 +742,19 @@ main {
                     color: $highlight-primary;
                     border: 1px solid $highlight-primary;
                     margin-left: auto;
+                    transition: all 0.3s ease;
 
                     &:hover {
-                        background: $highlight-primary;
-                        color: white;
-                        transition: all 0.3s ease;
+                        @include hovered-btn;
                     }
+                }
+
+                .btn.submitted {
+                    @include hovered-btn;
+                }
+
+                .btn.errored {
+                    @include errored-btn;
                 }
             }
         }
