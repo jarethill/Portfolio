@@ -521,7 +521,7 @@ header #main-nav ul li a p {
   width: 0;
   height: 0;
   font-size: 1.3rem;
-  color: #f0e3e3;
+  color: white;
   -webkit-transform: translateY(200px);
           transform: translateY(200px);
 }
