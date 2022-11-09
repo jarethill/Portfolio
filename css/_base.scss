@@ -170,6 +170,15 @@ a {
     }
 }
 
+.btn-offline {
+    background: #8e8e8e;
+    cursor: default;
+    
+    &:hover {
+        filter: unset;
+    }
+}
+
 header {
     background: $highlight-primary;
     height: $header-length;
