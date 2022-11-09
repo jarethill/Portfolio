@@ -7,8 +7,8 @@ const app = (() => {
     if (allInputsValid) {
       const [name, email, message] = this.formInputs;
 
-      const serviceId = 'default_service';
-      const templateId = 'template_0Dk2Vuaa';
+      const serviceId = 'service_2kalghs';
+      const templateId = 'template_st0egez';
       const templateParams = {
         from_name: name.value,
         from_email: email.value,
